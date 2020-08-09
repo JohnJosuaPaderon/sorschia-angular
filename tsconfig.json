@@ -22,6 +22,10 @@
       "sorschia-lib": [
         "dist/sorschia-lib/sorschia-lib",
         "dist/sorschia-lib"
+      ],
+      "sorschia-api-client-lib": [
+        "dist/sorschia-api-client-lib/sorschia-api-client-lib",
+        "dist/sorschia-api-client-lib"
       ]
     }
   },

@@ -1,5 +1,4 @@
 import { Platform } from './platform';
-import { Observable } from 'rxjs';
 import { PlatformRepositoryService } from '../repositories/platform-repository.service';
 
 export class Application {
@@ -8,7 +7,12 @@ export class Application {
     public PlatformId: number;
     public Platform: Platform;
 
-    public GetPlatform(repository: PlatformRepositoryService): Observable<Platform> {
-        return repository.Get(this.PlatformId);
+    public async GetPlatform(repository: PlatformRepositoryService): Promise<Platform> {
+        
+        if (this.PlatformId !== 0) {
+            this.Platform = await repository.Get(this.PlatformId);
+        }
+
+        return this.Platform;
     }
 }

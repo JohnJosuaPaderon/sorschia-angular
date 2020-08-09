@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { DeletePlatformModel } from './delete-platform-model';
-import { ObservableProcessService } from '../../processes/observable-process.service';
+import { ProcessBaseService } from '../../processes/process-base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export abstract class DeletePlatformService extends ObservableProcessService<boolean> {
+export abstract class DeletePlatformService extends ProcessBaseService<boolean> {
   public Model: DeletePlatformModel;
+}
+
+export class DeletePlatformModel {
+  public Id: number;
+  public IsCascaded: boolean;
 }
