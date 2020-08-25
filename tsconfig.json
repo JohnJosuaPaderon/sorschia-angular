@@ -21,6 +21,8 @@
     "paths": {
       "sorschia-lib": [
         "dist/sorschia-lib/sorschia-lib",
+        "dist/sorschia-lib",
+        "dist/sorschia-lib/sorschia-lib",
         "dist/sorschia-lib"
       ],
       "sorschia-api-client-lib": [
@@ -28,6 +30,10 @@
         "dist/sorschia-api-client-lib"
       ],
       "sorschia-ui-lib": [
+        "dist/sorschia-ui-lib/sorschia-ui-lib",
+        "dist/sorschia-ui-lib",
+        "dist/sorschia-ui-lib/sorschia-ui-lib",
+        "dist/sorschia-ui-lib",
         "dist/sorschia-ui-lib/sorschia-ui-lib",
         "dist/sorschia-ui-lib",
         "dist/sorschia-ui-lib/sorschia-ui-lib",

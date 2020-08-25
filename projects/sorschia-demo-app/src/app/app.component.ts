@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sorschia-demo-app';
+  public isSideNavOpened: boolean = true;
 }

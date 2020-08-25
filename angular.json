@@ -123,7 +123,92 @@
           }
         }
       }
-    } 
+    },
+    "sorschia-ui-lib": {
+      "projectType": "library",
+      "root": "projects/sorschia-ui-lib",
+      "sourceRoot": "projects/sorschia-ui-lib/src",
+      "prefix": "sor",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/sorschia-ui-lib/tsconfig.lib.json",
+            "project": "projects/sorschia-ui-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sorschia-ui-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sorschia-ui-lib/src/test.ts",
+            "tsConfig": "projects/sorschia-ui-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/sorschia-ui-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sorschia-ui-lib/tsconfig.lib.json",
+              "projects/sorschia-ui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "sorschia-lib": {
+      "projectType": "library",
+      "root": "projects/sorschia-lib",
+      "sourceRoot": "projects/sorschia-lib/src",
+      "prefix": "sor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/sorschia-lib/tsconfig.lib.json",
+            "project": "projects/sorschia-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sorschia-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sorschia-lib/src/test.ts",
+            "tsConfig": "projects/sorschia-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/sorschia-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sorschia-lib/tsconfig.lib.json",
+              "projects/sorschia-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
   },
   "defaultProject": "sorschia-demo-app"
 }

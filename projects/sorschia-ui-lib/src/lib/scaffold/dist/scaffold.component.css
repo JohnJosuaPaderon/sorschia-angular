@@ -1,0 +1,14 @@
+.scaffold.container {
+  display: grid;
+  height: 100vh;
+  max-height: 100vh;
+  grid-template-rows: auto 1fr;
+}
+
+.scaffold__header {
+  grid-row: 1/2;
+}
+
+.scaffold__body {
+  grid-row: 2/3;
+}
